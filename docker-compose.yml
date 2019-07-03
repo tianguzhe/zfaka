@@ -28,7 +28,7 @@ services:
         ports:
             - 8080:80
         depends_on:
-            - nginx
+            - zfaka
         environment:
             PMA_HOST: mysql
             TZ: 'Asia/Shanghai'
@@ -41,7 +41,7 @@ services:
         ports:
             - 999:80
         depends_on:
-            - php
+            - zfaka
                  
 networks:
     frontend:
