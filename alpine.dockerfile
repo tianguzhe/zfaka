@@ -28,7 +28,5 @@ RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev lib
     && echo "extension=yaf.so" >>/usr/local/etc/php/php.ini \
     && echo "yaf.environ='product'" >>/usr/local/etc/php/php.ini \
     && echo "yaf.use_namespace=1" >>/usr/local/etc/php/php.ini \
+    && echo "extension=bcmath.so" >>/usr/local/etc/php/php.ini \
     && apk del --no-cache gcc g++ make
-
-COPY ./php.ini /usr/local/etc/php/
-COPY ./php.conf /usr/local/etc/php/conf.d/php.conf
