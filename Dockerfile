@@ -15,5 +15,5 @@ WORKDIR /var/www/html
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod a+x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
-CMD [ "php", "-S", "0000:80", "-t", "/var/www/html/public" ]
+CMD ["php-fpm"]
 
