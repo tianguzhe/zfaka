@@ -13,7 +13,7 @@ RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev lib
     --with-png-dir=/usr/include/ \
     --with-jpeg-dir=/usr/include/ \
     && NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) \
-    && docker-php-ext-install -j${NPROC} gd iconv bcmath mysqli pdo pdo_mysql \
+    && docker-php-ext-install -j${NPROC} gd bcmath mysqli \
     && echo "安装 yaf" \
     && wget -c http://pecl.php.net/get/yaf-3.0.8.tgz \
     && tar zxf yaf-3.0.8.tgz \
@@ -28,7 +28,7 @@ RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev lib
     && echo "extension=yaf.so" >>/usr/local/etc/php/php.ini \
     && echo "yaf.environ='product'" >>/usr/local/etc/php/php.ini \
     && echo "yaf.use_namespace=1" >>/usr/local/etc/php/php.ini \
-    && apk del --no-cache freetype-dev libpng-dev libjpeg-turbo-dev gcc g++ make
+    && apk del --no-cache gcc g++ make
 
 WORKDIR /app
 RUN wget -q ${SOURCE} && unzip master.zip && mv zfaka-master/* . && rm master.zip && rm -rf zfaka-master && \
@@ -38,9 +38,10 @@ RUN wget -q ${SOURCE} && unzip master.zip && mv zfaka-master/* . && rm master.zi
     chmod -R a+w+r temp && \
     chmod -R a+w log 
 
-WORKDIR /var/www/html
+WORKDIR /zfaka
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod a+x /usr/local/bin/entrypoint.sh
 EXPOSE 80
 ENTRYPOINT ["entrypoint.sh"]
-CMD [ "php", "-S", "0000:80", "-t", "/var/www/html/public" ]
+CMD [ "php", "-S", "0000:80", "-t", "/zfaka/public" ]
+
