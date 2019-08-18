@@ -2,18 +2,20 @@
 
 # 说明：
 
-#易支付对接参考来源：
-
+## 易支付对接参考来源：
 https://github.com/anhao/zfaka-epay-sdk
-# payjs对接参考来源：
+
+## payjs对接参考来源：
 https://github.com/hiyouli/payjs-for-zfaka
 
 
 注意：本站参考以上两个开源sdk说明完成对接，未实际测试两个支付接口。若测试有bug可以积极反馈。
 
-## 安装步骤：
+# 安装步骤：
 
-宝塔版本与普通安装方法一致。
+## 方法1.宝塔版本与普通安装方法一致。（此处忽略）
+
+源码下载地址：https://github.com/Baiyuetribe/zfaka/archive/epay-payjs.zip
 
 ## Docker版安装(适用于服务器（ubuntu\debian\centos7...）、win10、Macos、树莓派等)：
 
