@@ -2,7 +2,7 @@ FROM baiyuetribe/zfaka:alpine
 
 MAINTAINER azure <https://baiyue.one>
 #每月自动更新至ZFAKA-master稳定版分支
-ARG SOURCE=https://github.com/zlkbdotnet/zfaka/archive/epay-payjs.zip
+ARG SOURCE=https://github.com/Baiyuetribe/zfaka/archive/epay-payjs.zip
 WORKDIR /app
 ADD default.conf .
 RUN wget -q ${SOURCE} && unzip epay-payjs.zip && mv zfaka-epay-payjs/* . && rm epay-payjs.zip && rm -rf zfaka-epay-payjs && \
