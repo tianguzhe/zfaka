@@ -2,7 +2,7 @@
 version: '3.1'
 services:
     php:
-        image: baiyuetribe/zfaka 
+        image: baiyuetribe/zfaka:epay-payjs 
         restart: always   
         volumes:
             - /opt/zfaka/code:/var/www/html     
