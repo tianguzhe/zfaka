@@ -31,8 +31,12 @@ mkdir -p /opt/zfaka && cd /opt/zfaka        #创建本地源码存储路径
 wget https://raw.githubusercontent.com/Baiyuetribe/zfaka/epay-payjs/docker-compose.yml
 docker-compose up -d
 ```
+安装后相关问题：
+
+![](https://camo.githubusercontent.com/952dae22f7d5bdb5789541bb056ad42082f8b4c6/68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67)
 
 程序源码存储路径 `/opt/zfaka` ;
+
 
 - 安装后网站地址：http://ip:3002;
 
