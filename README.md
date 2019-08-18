@@ -17,7 +17,7 @@ https://github.com/hiyouli/payjs-for-zfaka
 
 源码下载地址：https://github.com/Baiyuetribe/zfaka/archive/epay-payjs.zip
 
-## Docker版安装(适用于服务器（ubuntu\debian\centos7...）、win10、Macos、树莓派等)：
+## 方法2.Docker版安装(适用于服务器（ubuntu\debian\centos7...）、win10、Macos、树莓派等)：
 
 首先安装docker服务
 
