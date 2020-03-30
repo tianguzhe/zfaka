@@ -116,7 +116,7 @@ install_main(){
     start=$(date "+%s")
     mkdir -p /opt/zfaka && cd /opt/zfaka
     rm -f docker-compose.yml  
-    wget https://raw.githubusercontent.com/Baiyuetribe/zfaka/docker/docker-compose.yml      
+    wget https://raw.githubusercontent.com/tianguzhe/zfaka/docker/docker-compose.yml      
     blue "配置文件获取成功"
     greenbg "首次启动会拉取镜像，国内速度比较慢，请耐心等待完成"
     docker-compose up -d
