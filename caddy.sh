@@ -78,7 +78,7 @@ check_sys(){
 
 # 开始安装caddy
 install_caddy(){
-    bash <(curl -L -s https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/caddy_install.sh)
+    bash <(curl -L -s https://raw.githubusercontent.com/tianguzhe/zfaka/master/caddy_install.sh)
 }
 
 # 该配置会自动部署ssl证书，前提是域名已解析成功
